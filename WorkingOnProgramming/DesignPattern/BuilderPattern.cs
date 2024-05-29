@@ -6,6 +6,12 @@ namespace WorkingOnProgramming.DesignPattern
     //Builder: Ürünün adım adım oluşturulması için gerekli adımları tanımlar,her ürünün özelliğini belirler
     //ConcreteBuilder: Builder arayüzünü uygular ürünün oluşturulma süreci gerçekleştirilir.
     //Director: Oluşturma sürecini yöneten sınıftır
+    //Hangi durumlar kullanarız?
+    //1) Nesne karmaşık oluşturma adımları varsa
+    //2) Nesnenin farklı temsillerini oluşturmak istersek : Farklı yemek menülerinin (vejetaryen, etli, vegan) oluşturulması.
+    //3) Değiştirilemez nesneler oluştururken
+   
+
 
     //Product
     public class Car
@@ -22,7 +28,6 @@ namespace WorkingOnProgramming.DesignPattern
     }
 
     //ConcreteBuilder
-
     public class CarBuilder : ICarBuilder
     {
         private Car _car = new Car();
@@ -44,7 +49,6 @@ namespace WorkingOnProgramming.DesignPattern
             return this;
         }
     }
-
 
     //Director 
     public class Director
@@ -69,4 +73,6 @@ namespace WorkingOnProgramming.DesignPattern
                            .Build();
         }
     }
+
+
 }
